@@ -1,5 +1,6 @@
 FROM node:lts-bullseye-slim
 WORKDIR /app
-ADD . .
+COPY package*.json ./
 RUN npm install
+ADD . .
 CMD npm start
